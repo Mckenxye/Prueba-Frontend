@@ -31,7 +31,7 @@ function App() {
   };
 
   return (
-    <div className="bg-white min-h-screen text-[#1d1d1f] font-sans selection:bg-blue-500/30">
+    <div className="bg-white dark:bg-black min-h-screen text-[#1d1d1f] dark:text-[#f5f5f7] font-sans selection:bg-blue-500/30">
       <Navbar cartCount={cartItems.length} onOpenCart={() => setIsCartOpen(true)} />
       <main>
         <Hero onBuy={addToCart} />

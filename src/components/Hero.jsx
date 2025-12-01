@@ -14,7 +14,7 @@ const Hero = ({ onBuy }) => {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
   return (
-    <section ref={containerRef} className="relative min-h-screen md:h-[150vh] bg-[#f5f5f7] overflow-hidden flex flex-col items-center pt-24 md:pt-32">
+    <section ref={containerRef} className="relative min-h-screen md:h-[150vh] bg-[#f5f5f7] dark:bg-black overflow-hidden flex flex-col items-center pt-24 md:pt-32">
       <motion.div 
         style={{ y, opacity, scale }}
         className="text-center z-10 px-4 mb-8 md:mb-12 md:sticky md:top-32"
@@ -23,7 +23,7 @@ const Hero = ({ onBuy }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-4xl sm:text-5xl md:text-8xl font-bold text-[#1d1d1f] mb-4 tracking-tight"
+          className="text-4xl sm:text-5xl md:text-8xl font-bold text-[#1d1d1f] dark:text-[#f5f5f7] mb-4 tracking-tight"
         >
           MacBook Air
         </motion.h1>
@@ -31,7 +31,7 @@ const Hero = ({ onBuy }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-xl sm:text-2xl md:text-4xl font-medium text-[#1d1d1f]"
+          className="text-xl sm:text-2xl md:text-4xl font-medium text-[#1d1d1f] dark:text-[#f5f5f7]"
         >
           Alucinante. Atrae todas las miradas.
         </motion.p>
@@ -47,7 +47,7 @@ const Hero = ({ onBuy }) => {
           >
             Comprar
           </button>
-          <button className="text-[#0066cc] text-[21px] font-normal hover:underline flex items-center justify-center gap-1 w-full sm:w-auto group">
+          <button className="text-[#0066cc] dark:text-[#2997ff] text-[21px] font-normal hover:underline flex items-center justify-center gap-1 w-full sm:w-auto group">
             Más información <span className="text-xl group-hover:translate-x-0.5 transition-transform">›</span>
           </button>
         </motion.div>

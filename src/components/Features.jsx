@@ -20,21 +20,21 @@ const item = {
 const FeatureCard = ({ icon: Icon, title, description }) => (
   <motion.div 
     variants={item}
-    className="relative overflow-hidden bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100"
+    className="relative overflow-hidden bg-white dark:bg-[#1d1d1f] p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100 dark:border-gray-800"
   >
     <div className="relative z-10">
-      <div className="mb-6 p-3 bg-blue-50 rounded-2xl w-fit group-hover:bg-blue-100 transition-colors">
-        <Icon className="w-8 h-8 text-[#0071e3]" />
+      <div className="mb-6 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-2xl w-fit group-hover:bg-blue-100 dark:group-hover:bg-blue-900/40 transition-colors">
+        <Icon className="w-8 h-8 text-[#0071e3] dark:text-[#2997ff]" />
       </div>
-      <h3 className="text-2xl font-semibold text-[#1d1d1f] mb-3">{title}</h3>
-      <p className="text-[#86868b] leading-relaxed text-lg font-medium">{description}</p>
+      <h3 className="text-2xl font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] mb-3">{title}</h3>
+      <p className="text-[#86868b] dark:text-[#a1a1a6] leading-relaxed text-lg font-medium">{description}</p>
     </div>
   </motion.div>
 );
 
 const Features = () => {
   return (
-    <section className="py-24 md:py-32 bg-[#f5f5f7] relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-[#f5f5f7] dark:bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -43,11 +43,11 @@ const Features = () => {
           transition={{ duration: 1 }}
           className="text-center mb-16 md:mb-24"
         >
-          <h2 className="text-4xl md:text-7xl font-bold text-[#1d1d1f] mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-7xl font-bold text-[#1d1d1f] dark:text-[#f5f5f7] mb-6 tracking-tight">
             Va rápido. <br />
-            <span className="text-[#86868b]">Llega lejos.</span>
+            <span className="text-[#86868b] dark:text-[#a1a1a6]">Llega lejos.</span>
           </h2>
-          <p className="text-xl md:text-2xl text-[#1d1d1f] max-w-3xl mx-auto leading-relaxed font-medium">
+          <p className="text-xl md:text-2xl text-[#1d1d1f] dark:text-[#f5f5f7] max-w-3xl mx-auto leading-relaxed font-medium">
             El MacBook Air vuela en el trabajo y en el juego, y el chip M4 trae capacidades aún mayores y funciones avanzadas de IA a este portátil superportátil.
           </p>
         </motion.div>

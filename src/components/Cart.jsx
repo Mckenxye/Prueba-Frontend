@@ -28,17 +28,17 @@ const Cart = ({ isOpen, onClose, items, onRemove }) => {
         animate={{ x: 0 }}
         exit={{ x: "100%" }}
         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-        className="relative w-full max-w-md bg-white h-full shadow-2xl flex flex-col"
+        className="relative w-full max-w-md bg-white dark:bg-[#1d1d1f] h-full shadow-2xl flex flex-col"
       >
         {/* Header */}
-        <div className="p-6 border-b border-gray-100 flex items-center justify-between bg-white z-10">
-          <h2 className="text-xl font-semibold text-[#1d1d1f]">
+        <div className="p-6 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between bg-white dark:bg-[#1d1d1f] z-10">
+          <h2 className="text-xl font-semibold text-[#1d1d1f] dark:text-[#f5f5f7]">
             {step === 1 && 'Tu Bolsa'}
             {step === 2 && 'Envío'}
             {step === 3 && 'Pago'}
           </h2>
-          <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
-            <X className="w-5 h-5 text-gray-500" />
+          <button onClick={onClose} className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+            <X className="w-5 h-5 text-gray-500 dark:text-gray-400" />
           </button>
         </div>
 
